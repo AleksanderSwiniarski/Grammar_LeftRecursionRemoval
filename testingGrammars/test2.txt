@@ -1,0 +1,41 @@
+// Grammar 1
+
+#G
+#T a /\ ( ) ,
+#NT S T
+#P S a | /\ | ( T )
+#P T S | T , S
+
+// Grammar 2
+
+#G
+#T a b
+#NT A B
+#P A a B a | b A b
+#P B b B b | a A a
+
+// Grammar 3
+
+#G
+#T a b
+#NT S A
+#P S a A a | S a | A
+#P A b | S
+
+// Grammar 4
+
+#G
+#T a b
+#NT S A B
+#P S A S B
+#P A A a S | a
+#P B a | b
+
+// Grammar 5
+
+#G
+#T a b
+#NT S A B
+#P S A S B | e
+#P A a A S | a | B
+#P B B b S | A | B b

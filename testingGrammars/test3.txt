@@ -1,0 +1,8 @@
+#G
+#T a b
+#NT S A B
+#Eps eps
+#P S A S B | e
+#P A a A S | a | B
+#P B B b S | A | B b
+#Seq S A B

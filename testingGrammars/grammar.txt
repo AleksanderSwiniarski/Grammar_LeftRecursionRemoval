@@ -1,0 +1,42 @@
+// Definition of the first grammar
+#G // Beginning of new grammar 
+#Eps eps                        // Optional new definition of epsilon 
+#NT A B C                       // Definition of non terminals of grammar 
+#T a b c                        // Definition of terminals of grammar 
+#P A a | b | c | eps            // Definition of 4 productions of nonterminal A 
+#P B a A b | b C c              // Definition of 2 production of nonterminal B 
+#P C C a b c                    // Definition of production of nonterminal C 
+#Seq C B A                      // Definition of nonterminal sequence for algorithm 
+// Grammar 1
+#G
+#T a /\ ( ) ,
+#Eps newEps
+#NT S T
+#P S a | /\ | ( T )
+#P T S | T , S
+// Grammar 2
+#G
+#T a b
+#NT A B
+#P A a B a | b A b
+#P B b B b | a A a
+// Grammar 3
+#G
+#T a b
+#NT S A
+#P S a A a | S a
+#P A b | S
+// Grammar 4
+#G
+#T a b
+#NT S A B
+#P S A S B
+#P A A a S | a
+#P B a | b
+// Grammar 5
+#G
+#T a b
+#NT S A B
+#P S S A S B | e
+#P A a A S | a
+#P B S b S | A | b b

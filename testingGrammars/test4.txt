@@ -1,0 +1,81 @@
+// Grammar 1
+
+#G
+#NT S T
+#P S a | /\ | ( T )
+#P T S | T , S
+
+// Grammar 2
+
+#G
+#T a /\ ( ) ,
+#P S a | /\ | ( T )
+#P T S | T , S
+
+// Grammar 3
+
+#G
+#T a /\ ( ) ,
+#NT S T
+
+// Grammar 4
+
+#G
+#T a /\ ( ) ,
+#NT S T /\
+#P S a | /\ | ( T )
+#P T S | T , S
+#Seq S T
+
+// Grammar 5
+
+#G
+#T a /\ ( ) ,
+#NT S T
+#P S a | /\ | ( T ) | ( undefined )
+#P T S | T , S
+
+// Grammar 6
+
+#G
+#Eps newEps
+#T a /\ ( ) , newEps
+#NT S T
+#P S a | /\ | ( T )
+#P T S | T , S
+
+// Grammar 7
+
+#G
+#T a /\ ( ) ,
+#NT S T
+#P S a | /\ | ( T )
+#P T S | T , S
+#Seq A S T
+
+// Grammar 8
+
+#G
+#T a /\ ( ) ,
+#NT S T
+#P S a | /\ | ( T ) | a | /\
+#P T S | T , S
+#P S /\
+
+// Grammar 9
+
+#G
+#T a /\ ( ) ,
+#NT S T
+#P ST a | /\ | ( T )
+#P aT S | T , S
+#P O S | T , S
+
+// Grammar 10
+
+#G
+#T a /\ ( ) ,
+#NT S T A
+#P S a | /\ | ( T )
+#P T S | T , S
+#Seq S T
